@@ -16,6 +16,7 @@
 		3ABAA0902536A091005BCFC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ABAA08F2536A091005BCFC0 /* Assets.xcassets */; };
 		3ABAA09B2536A092005BCFC0 /* GameOfLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABAA09A2536A092005BCFC0 /* GameOfLifeTests.swift */; };
 		3ABAA0A62536A092005BCFC0 /* GameOfLifeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABAA0A52536A092005BCFC0 /* GameOfLifeUITests.swift */; };
+		3ABAA0B72536A100005BCFC0 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABAA0B62536A100005BCFC0 /* ButtonNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		3ABAA0A12536A092005BCFC0 /* GameOfLifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameOfLifeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ABAA0A52536A092005BCFC0 /* GameOfLifeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOfLifeUITests.swift; sourceTree = "<group>"; };
 		3ABAA0A72536A092005BCFC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3ABAA0B62536A100005BCFC0 /* ButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				3ABAA08C2536A091005BCFC0 /* Main.storyboard */,
 				3ABAA08F2536A091005BCFC0 /* Assets.xcassets */,
 				3ABAA0912536A091005BCFC0 /* Info.plist */,
+				3ABAA0B62536A100005BCFC0 /* ButtonNode.swift */,
 			);
 			path = GameOfLife;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ABAA0892536A091005BCFC0 /* GameScene.swift in Sources */,
+				3ABAA0B72536A100005BCFC0 /* ButtonNode.swift in Sources */,
 				3ABAA08B2536A091005BCFC0 /* GameViewController.swift in Sources */,
 				3ABAA0832536A091005BCFC0 /* AppDelegate.swift in Sources */,
 			);
