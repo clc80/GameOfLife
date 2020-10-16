@@ -16,6 +16,10 @@ class Grid:SKSpriteNode {
     var cellWidth = 0
     var cellHeight = 0
     
+    // Counters
+    var generation = 0
+    var population = 0
+    
     // Creature
     var gridArray = [[Creature]]()
     
@@ -24,6 +28,14 @@ class Grid:SKSpriteNode {
         // Only one touch
         let touch = touches.first!
         let location = touch.location(in: self)
+        
+        //calculate the grid array position
+        let gridX = Int(location.x) / cellWidth
+        let gridY = Int(location.y) / cellHeight
+        
+        // Make the bubble visibility
+        let creature = gridArray[gridX][gridY]
+        creature.isAlive = !creature.isAlive
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -50,8 +62,8 @@ class Grid:SKSpriteNode {
         let gridPosition = CGPoint(x: x*cellWidth, y: y*cellWidth)
         creature.position = gridPosition
         
-        // set isAlive
-        creature.isAlive = true
+        // set isNotAlive
+        creature.isAlive = false
         
         //Add to the grid
         addChild(creature)
@@ -72,6 +84,37 @@ class Grid:SKSpriteNode {
                 addCreatureAtPosition(x: gridX, y: gridY)
             }
             
+        }
+    }
+    
+    // Check the neighbors
+    func checkNeighbors() {
+        // Loop through colums
+        for gridX in 0..<columns {
+            // Loop through rows
+            for gridY in 0..<rows {
+                // grab the creature at the position
+                let currentCreature = gridArray[gridX][gridY]
+                // reset neighbor count
+                currentCreature.neighborCount = 0
+                // loop through all adjacent creatures
+                for innerGridX in (gridX - 1)...(gridX + 1) {
+                    //make sure it's inside the array
+                    if innerGridX < 0 || innerGridX >= columns { continue }
+                    for innerGridY in (gridY - 1)...(gridY + 1) {
+                        // make sure it's inside the array
+                        if innerGridY < 0 || innerGridY >= rows { continue }
+                        // Don't count itself
+                        if innerGridX == gridX && innerGridY == gridY { continue }
+                        // Grab adjacent creature
+                        let adjacentCreature:Creature = gridArray[innerGridX][innerGridY]
+                        // onli interested in living creatures
+                        if adjacentCreature.isAlive {
+                            currentCreature.neighborCount += 1
+                        }
+                    }
+                }
+            }
         }
     }
     
