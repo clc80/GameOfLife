@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A8BE20925392E670053275C /* Creature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8BE20825392E670053275C /* Creature.swift */; };
 		3ABAA0832536A091005BCFC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABAA0822536A091005BCFC0 /* AppDelegate.swift */; };
 		3ABAA0852536A091005BCFC0 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3ABAA0842536A091005BCFC0 /* GameScene.sks */; };
 		3ABAA0872536A091005BCFC0 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3ABAA0862536A091005BCFC0 /* Actions.sks */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A8BE20825392E670053275C /* Creature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creature.swift; sourceTree = "<group>"; };
 		3ABAA07F2536A091005BCFC0 /* GameOfLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ABAA0822536A091005BCFC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ABAA0842536A091005BCFC0 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -82,6 +84,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A8BE20025392E070053275C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3ABAA0842536A091005BCFC0 /* GameScene.sks */,
+				3ABAA0882536A091005BCFC0 /* GameScene.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3A8BE20425392E3D0053275C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3ABAA0BB2536A70B005BCFC0 /* Grid.swift */,
+				3ABAA08A2536A091005BCFC0 /* GameViewController.swift */,
+				3ABAA0B62536A100005BCFC0 /* ButtonNode.swift */,
+				3ABAA0862536A091005BCFC0 /* Actions.sks */,
+				3A8BE20825392E670053275C /* Creature.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		3ABAA0762536A091005BCFC0 = {
 			isa = PBXGroup;
 			children = (
@@ -106,15 +129,11 @@
 			isa = PBXGroup;
 			children = (
 				3ABAA0822536A091005BCFC0 /* AppDelegate.swift */,
-				3ABAA0842536A091005BCFC0 /* GameScene.sks */,
-				3ABAA0BB2536A70B005BCFC0 /* Grid.swift */,
-				3ABAA0862536A091005BCFC0 /* Actions.sks */,
-				3ABAA0882536A091005BCFC0 /* GameScene.swift */,
-				3ABAA08A2536A091005BCFC0 /* GameViewController.swift */,
+				3A8BE20025392E070053275C /* View */,
+				3A8BE20425392E3D0053275C /* Controller */,
 				3ABAA08C2536A091005BCFC0 /* Main.storyboard */,
 				3ABAA08F2536A091005BCFC0 /* Assets.xcassets */,
 				3ABAA0912536A091005BCFC0 /* Info.plist */,
-				3ABAA0B62536A100005BCFC0 /* ButtonNode.swift */,
 			);
 			path = GameOfLife;
 			sourceTree = "<group>";
@@ -270,6 +289,7 @@
 			files = (
 				3ABAA0892536A091005BCFC0 /* GameScene.swift in Sources */,
 				3ABAA0B72536A100005BCFC0 /* ButtonNode.swift in Sources */,
+				3A8BE20925392E670053275C /* Creature.swift in Sources */,
 				3ABAA08B2536A091005BCFC0 /* GameViewController.swift in Sources */,
 				3ABAA0BC2536A70B005BCFC0 /* Grid.swift in Sources */,
 				3ABAA0832536A091005BCFC0 /* AppDelegate.swift in Sources */,
