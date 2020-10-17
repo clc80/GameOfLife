@@ -118,6 +118,33 @@ class Grid:SKSpriteNode {
         }
     }
     
+    // update the creatrue status
+    func updateCreatues() {
+        // Reset the population counter
+        population = 0
+        //loop through columns
+        for gridX in 0..<columns {
+            //loop through rows
+            for gridY in 0..<rows {
+                //grab the creature
+                let currentCreature = gridArray[gridX][gridY]
+                //check to makse sure all rules are followed
+                switch currentCreature.neighborCount {
+                case 3:
+                    currentCreature.isAlive = true
+                    break
+                case 0...1, 4...8:
+                    currentCreature.isAlive = false
+                    break
+                default:
+                    break
+                }
+                // refresh the population count
+                if currentCreature.isAlive { population += 1 }
+            }
+        }
+        
+    }
     
 }
 
