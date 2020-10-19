@@ -18,6 +18,7 @@ class GameScene: SKScene {
     var pauseButton: ButtonNode!
     var clearButton: ButtonNode!
     var stopButton: ButtonNode!
+    var gridNode: Grid!
     
     
     override func didMove(to view: SKView) {
@@ -29,7 +30,12 @@ class GameScene: SKScene {
         pauseButton = childNode(withName: "pauseButton") as! ButtonNode
         clearButton = childNode(withName: "clearButton") as! ButtonNode
         stopButton = childNode(withName: "stopButton") as! ButtonNode
+        gridNode = childNode(withName: "gridNode") as! Grid
         
+        //test step forward button
+        stepForwardButton.selectedHandler = {
+            self.stepSimulation()
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -38,5 +44,15 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
 
+    }
+    
+    // step by step
+    func stepSimulation() {
+        // run next step in simulation
+        gridNode.evolve()
+        
+        // update UIlabel objects
+        populationLabel.text = String(gridNode.population)
+        generationLabel.text = String(gridNode.generation)
     }
 }
