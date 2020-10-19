@@ -146,6 +146,18 @@ class Grid:SKSpriteNode {
         
     }
     
+    // Update the grid
+    func evolve() {
+        // update all creature neighbors
+        checkNeighbors()
+        
+        // calculate all creatures
+        updateCreatues()
+        
+        // increment generation counter
+        generation += 1
+    }
+    
 }
 
 
