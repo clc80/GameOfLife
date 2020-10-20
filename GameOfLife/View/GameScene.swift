@@ -56,6 +56,13 @@ class GameScene: SKScene {
         pauseButton.selectedHandler = {[unowned self] in
             self.isPaused = true
         }
+        // set up the clear button
+        clearButton.selectedHandler = {[unowned self] in
+            gridNode.clear()
+            // update UIlabel objects
+            populationLabel.text = String(gridNode.population)
+            generationLabel.text = String(gridNode.generation)
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

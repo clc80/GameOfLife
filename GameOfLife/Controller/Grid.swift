@@ -158,6 +158,27 @@ class Grid:SKSpriteNode {
         generation += 1
     }
     
+    // clear the grid
+    func clear() {
+        // reset the population and generation
+        population = 0
+        generation = 0
+        // loop through the columns
+        for gridX in 0..<columns {
+            // loop through the rows
+            for gridY in 0..<rows {
+                // grab creature
+                let currentCreature = gridArray[gridX][gridY]
+                //remove if active
+                if currentCreature.isAlive {
+                    currentCreature.isAlive = false
+                }
+            }
+                
+        }
+            
+    }
+    
 }
 
 
