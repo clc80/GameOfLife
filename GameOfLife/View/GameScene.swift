@@ -36,6 +36,26 @@ class GameScene: SKScene {
         stepForwardButton.selectedHandler = {
             self.stepSimulation()
         }
+        
+        // Create an timer
+        let delay = SKAction.wait(forDuration: 0.5)
+        // play animation
+        let callMethod = SKAction.perform(#selector(stepSimulation), onTarget: self)
+        // crate the delay
+        let stepSequence = SKAction.sequence([delay, callMethod])
+        // infinite loop
+        let simulation = SKAction.repeatForever(stepSequence)
+        // run action
+        self.run(simulation)
+        // allow pause
+        self.isPaused = true
+        // set up play/pause buttons
+        playButton.selectedHandler = {[unowned self] in
+            self.isPaused = false
+        }
+        pauseButton.selectedHandler = {[unowned self] in
+            self.isPaused = true
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -47,7 +67,7 @@ class GameScene: SKScene {
     }
     
     // step by step
-    func stepSimulation() {
+    @objc func stepSimulation() {
         // run next step in simulation
         gridNode.evolve()
         
