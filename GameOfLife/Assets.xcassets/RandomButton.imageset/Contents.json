@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "SpeedUp.png",
+      "filename" : "RandomButton.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "SpeedUp@2x.png",
+      "filename" : "RandomButton@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "SpeedUp@3x.png",
+      "filename" : "RandomButton@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

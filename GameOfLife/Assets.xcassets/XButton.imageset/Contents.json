@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "slowDown.png",
+      "filename" : "XButton.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "slowDown@2x.png",
+      "filename" : "XButton@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "slowDown@3x.png",
+      "filename" : "XButton@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

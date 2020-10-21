@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "StepOver.png",
+      "filename" : "stepOver.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "StepOver@2x.png",
+      "filename" : "stepOver@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "StepOver@3x.png",
+      "filename" : "stepOver@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
