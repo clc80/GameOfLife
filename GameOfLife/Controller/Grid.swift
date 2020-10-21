@@ -174,9 +174,53 @@ class Grid:SKSpriteNode {
                     currentCreature.isAlive = false
                 }
             }
-                
         }
+    }
+    
+    // Preset 1
+    func preset1() {
+        for gridX in 0..<columns {
+            for gridY in 0..<rows {
+                if gridX % 3 == 0 {
+                    let currentCreature = gridArray[gridX][gridY]
+                    currentCreature.isAlive = true
+                }
+            }
+        }
+    }
+    // Preset 2
+    func preset2() {
+        for gridX in 0..<columns {
+            for gridY in 0..<rows {
+                if gridY % 5 == 0 {
+                    let currentCreature = gridArray[gridX][gridY]
+                    currentCreature.isAlive = true
+                }
+            }
+        }
+    }
+    
+    func preset3() {
+        var x1 = 0
+        var y = 0
+        var x2 = columns - 1
+        while x1 < columns {
+            gridArray[x1][y].isAlive = true
+            gridArray[x2][y].isAlive = true
             
+            x1 += 1
+            x2 -= 1
+            y += 1
+        }
+    }
+    func random() {
+        var x = 0
+        var y = 0
+        for _ in (0...100) {
+            x = Int.random(in: 0..<columns)
+            y = Int.random(in: 0..<rows)
+            gridArray[x][y].isAlive = true
+        }
     }
     
 }

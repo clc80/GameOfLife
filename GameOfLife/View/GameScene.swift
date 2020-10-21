@@ -17,8 +17,12 @@ class GameScene: SKScene {
     var playButton: ButtonNode!
     var pauseButton: ButtonNode!
     var clearButton: ButtonNode!
-    var stopButton: ButtonNode!
     var gridNode: Grid!
+    
+    var preset1Button: ButtonNode!
+    var preset2Button: ButtonNode!
+    var preset3Button: ButtonNode!
+    var randomButton: ButtonNode!
     
     
     override func didMove(to view: SKView) {
@@ -29,8 +33,12 @@ class GameScene: SKScene {
         playButton = childNode(withName: "playButton") as! ButtonNode
         pauseButton = childNode(withName: "pauseButton") as! ButtonNode
         clearButton = childNode(withName: "clearButton") as! ButtonNode
-        stopButton = childNode(withName: "stopButton") as! ButtonNode
         gridNode = childNode(withName: "gridNode") as! Grid
+        
+        preset1Button = childNode(withName: "preset1") as! ButtonNode
+        preset2Button = childNode(withName: "preset2") as! ButtonNode
+        preset3Button = childNode(withName: "preset3") as! ButtonNode
+        randomButton = childNode(withName: "randomButton") as! ButtonNode
         
         //test step forward button
         stepForwardButton.selectedHandler = {
@@ -62,6 +70,20 @@ class GameScene: SKScene {
             // update UIlabel objects
             populationLabel.text = String(gridNode.population)
             generationLabel.text = String(gridNode.generation)
+        }
+        
+        // set up Present buttons
+        preset1Button.selectedHandler = {[unowned self] in
+            gridNode.preset1()
+        }
+        preset2Button.selectedHandler = {[unowned self] in
+            gridNode.preset2()
+        }
+        preset3Button.selectedHandler = {[unowned self] in
+            gridNode.preset3()
+        }
+        randomButton.selectedHandler = {[unowned self] in
+            gridNode.random()
         }
     }
     

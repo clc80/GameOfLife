@@ -87,8 +87,8 @@
 		3A8BE20025392E070053275C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3ABAA0842536A091005BCFC0 /* GameScene.sks */,
 				3ABAA0882536A091005BCFC0 /* GameScene.swift */,
+				3ABAA0842536A091005BCFC0 /* GameScene.sks */,
 			);
 			path = View;
 			sourceTree = "<group>";
